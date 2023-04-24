@@ -1,0 +1,66 @@
+@startuml
+class EnemyMissileScript {
+    + SetTarget(target:int) : void
+}
+MonoBehaviour <|-- EnemyMissileScript
+EnemyMissileScript --> "targetTileLocation" Vector3
+class EnemyScript {
+    + PlaceEnemyShips() : List<int[]>
+    + NPCTurn() : void
+    + MissileHit(hit:int) : void
+    + SunkPlayer() : void
+    + PauseAndEnd(miss:int) : void
+}
+MonoBehaviour <|-- EnemyScript
+EnemyScript --> "enemyMissilePrefab" GameObject
+EnemyScript --> "gameManager" GameManager
+class FireScript {
+}
+MonoBehaviour <|-- FireScript
+FireScript --> "redFire" GameObject
+FireScript --> "yellowFire" GameObject
+FireScript --> "orangeFire" GameObject
+class GameManager {
+    + TileClicked(tile:GameObject) : void
+    + CheckHit(tile:GameObject) : void
+    + EnemyHitPlayer(tile:Vector3, tileNum:int, hitObj:GameObject) : void
+    + EndEnemyTurn() : void
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- GameManager
+GameManager --> "enemyScript" EnemyScript
+GameManager --> "allTileScripts<TileScript>" "List`1"
+GameManager --> "nextBtn" Button
+GameManager --> "rotateBtn" Button
+GameManager --> "replayBtn" Button
+GameManager --> "topText" Text
+GameManager --> "playerShipText" Text
+GameManager --> "enemyShipText" Text
+GameManager --> "missilePrefab" GameObject
+GameManager --> "enemyMissilePrefab" GameObject
+GameManager --> "firePrefab" GameObject
+GameManager --> "woodDock" GameObject
+class MissileScript {
+}
+MonoBehaviour <|-- MissileScript
+class ShipScript {
+    + xOffset : float = 0
+    + zOffset : float = 0
+    + shipSize : int
+    + ClearTileList() : void
+    + GetOffsetVec(tilePos:Vector3) : Vector3
+    + RotateShip() : void
+    + SetPosition(newVec:Vector3) : void
+    + SetClickedTile(tile:GameObject) : void
+    + OnGameBoard() : bool
+    + HitCheckSank() : bool
+    + FlashColor(tempColor:Color) : void
+}
+MonoBehaviour <|-- ShipScript
+class TileScript {
+    + SetTileColor(index:int, color:Color32) : void
+    + SwitchColors(colorIndex:int) : void
+}
+MonoBehaviour <|-- TileScript
+@enduml
