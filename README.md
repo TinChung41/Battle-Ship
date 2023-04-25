@@ -7,3 +7,4 @@ The game was developed using Unity engine and programmed in C#. We hope that pla
 The rules of Battleship are simple: each player places their ships on a grid and takes turns guessing the location of their opponent's ships. The first player to sink all of their opponent's ships wins.
 
 Our game includes a single player mode against the bot player. In this mode, the bot player will use a more strategic algorithm for making moves instead of simply guessing randomly.
+![Game UML drawio](https://user-images.githubusercontent.com/98845918/234217718-a57f5426-0fae-4f98-8c19-a974a1461560.png)
