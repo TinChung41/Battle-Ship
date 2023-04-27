@@ -9,4 +9,5 @@ The rules of Battleship are simple: each player places their ships on a grid and
 Our game includes a single player mode against the bot player. In this mode, the bot player will use a more strategic algorithm for making moves instead of simply guessing randomly.
 
 # UML for our game project
+
 ![Game UML drawio](https://user-images.githubusercontent.com/98845918/234217718-a57f5426-0fae-4f98-8c19-a974a1461560.png)
