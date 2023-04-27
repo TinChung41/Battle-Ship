@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    char[] guessGrid;
-    List<int> potentialHits;
-    List<int> currentHits;
-    private int guess;
-    public GameObject enemyMissilePrefab;
-    public GameManager gameManager;
+    char[] guessGrid; // array to keep track of guesses
+    List<int> potentialHits; // list of potential hits
+    List<int> currentHits; // list of current hits
+    private int guess; // current guess
+    public GameObject enemyMissilePrefab; // enemy missile prefab
+    public GameManager gameManager; // game manager object
 
     private void Start()
     {
         potentialHits = new List<int>();
         currentHits = new List<int>();
-        guessGrid = Enumerable.Repeat('o', 100).ToArray();
+        guessGrid = Enumerable.Repeat('o', 100).ToArray(); // initialize guess grid with 'o' for each tile
     }
 
     public List<int[]> PlaceEnemyShips()
