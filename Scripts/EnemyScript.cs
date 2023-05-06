@@ -164,6 +164,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     public void PauseAndEnd(int miss)
+
     {
         if(currentHits.Count > 0 && currentHits[0] > miss)
         {
@@ -180,4 +181,8 @@ public class EnemyScript : MonoBehaviour
         }
         Invoke("EndTurn", 1.0f);
     }
+
+
+    
 }
+
