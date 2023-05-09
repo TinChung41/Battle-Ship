@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
             shipScript.FlashColor(Color.red);
         } else
         {
+            //add comment de co git acti cho vui :))
             if(shipIndex <= ships.Length - 2)
             {
                 shipIndex++;
