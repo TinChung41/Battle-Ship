@@ -29,21 +29,22 @@ If wrong, this area will change to Grey .
 ![image](https://github.com/TinChung41/Battle-Ship/assets/98845918/1cac07a2-7bf9-45af-a1d4-be6ba3c3eb3b)
 
 Step 6: The remaining ships on your side or the enemy’s side will reduce by 1 if you or your opponent hit any entire ships. Repeat the attempts until neither ship left on one side and the game will finish .
+
 ![image](https://github.com/TinChung41/Battle-Ship/assets/98845918/57832cfe-9472-4315-b78b-3036913c43ac)
 
 
 
 
-##Algorithms Consideration
-###Randomization Algorithm
+## Algorithms Consideration
+### Randomization Algorithm
 The PlaceEnemyShips() method in EnemyScript.cs uses a randomization algorithm to randomly place the enemy ships on the game board. This algorithm generates a random starting position for each ship and checks if the position is valid before placing the ship. Here's the code for the PlaceEnemyShips() method:
 
-###Search Algorithm
+### Search Algorithm
 The CheckHit() method in GameManager.cs uses a search algorithm to check if a clicked tile is part of an enemy ship. The algorithm searches through the list of enemy ships to see if the tile number matches any of the tile numbers in the ship's position array. And another example of an event handler in the game is the NextShipClicked() method in GameManager.cs. This method is called when the player clicks the "Next Ship" button during the ship placement phase of the game. The method checks whether the current ship is on the game board, and if it is not, it flashes a red color to indicate an error. If the ship is on the board, the method moves on to the next ship in the list or ends the ship placement phase if all ships have been placed.
 
-###Event handling algorithm: 
+### Event handling algorithm: 
 There are multiple times this algorithm gets implemented so we will show 2 examples:
-•	 the TileClicked() method in GameManager.cs is an example of an event handler that responds to the player clicking on a tile on the game board. The TileClicked() method is called when a tile is clicked on by the player, and it checks whether the game is in setup mode or play mode to determine how to handle the click.
+* the TileClicked() method in GameManager.cs is an example of an event handler that responds to the player clicking on a tile on the game board. The TileClicked() method is called when a tile is clicked on by the player, and it checks whether the game is in setup mode or play mode to determine how to handle the click.
 
 
 
